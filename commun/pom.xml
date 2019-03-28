@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>map-to-json</groupId>
+		<artifactId>in-spring</artifactId>
+		<version>1</version>
+	</parent>
+	
+	<artifactId>commun</artifactId>
+	<version>1</version>
+	
+	<build>
+        <sourceDirectory>src/main/java</sourceDirectory>  <!-- éventuellement à changer : localisation des fichiers sources -->
+        <plugins>
+
+
+
+        </plugins>
+    </build>
+
+    <dependencies>
+
+		<!-- non nécessaire si les dépendances spring sont dans le pom "racine"
+			ici, c'est non fait, car un seul web service : serveur, et un client spring (non web)
+			d'où répartition des dépendances -->
+
+		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>2.9.8</version>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.9.8</version>
+		</dependency>
+
+    </dependencies>
+
+</project>

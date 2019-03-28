@@ -4,10 +4,25 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>map-to-json</groupId> <!-- à changer par le nom du groupe -->
-    <artifactId>jackson</artifactId> <!-- et le nom du projet -->
-    <version>1.0-SNAPSHOT</version>
+    <groupId>map-to-json</groupId>
+    <artifactId>in-spring</artifactId>
+    <version>1</version>
 
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.5.RELEASE</version>
+    </parent>
+
+
+    <modules>
+        <module>commun</module>
+        <module>client</module>
+        <module>serveur</module>
+    </modules>
+
+    <packaging>pom</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8
@@ -19,11 +34,8 @@
 
 
     <build>
-        <sourceDirectory>src/main/java
-        </sourceDirectory>  <!-- éventuellement à changer : localisation des fichiers sources -->
- 
-		<plugins>
-            
+
+        <plugins>
 
 
 
@@ -39,40 +51,6 @@
             </plugin>
 
 
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <version>1.6.0</version> <!-- à ne pas changer : c'est la version du plugin (et pas de java) -->
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>java</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <mainClass>sample.Main
-                    </mainClass>  <!-- à changer : classe avec point d'entrée pour votre projet -->
-                    <!-- argument de la commande java (en plus du nom de la classe et du classpath -->
-
-                    <!-- arguments récupérés dans le main -->
-                    <!--
-                        <arguments>
-                                <argument>argument1</argument>
-                        </arguments>
-                    -->
-
-                    <!-- arguments de configuration système -->
-                    <!--
-                        <systemProperties>
-                                <systemProperty>
-                                    <key>myproperty</key>
-                                    <value>myvalue</value>
-                                </systemProperty>
-                        </systemProperties>
-                     -->
-                </configuration>
-            </plugin>
 
         </plugins>
     </build>
@@ -80,20 +58,8 @@
 
     <dependencies>
 
-		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
-		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-core</artifactId>
-			<version>2.9.8</version>
-		</dependency>
 
 
-        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>2.9.8</version>
-        </dependency>
 
     </dependencies>
 

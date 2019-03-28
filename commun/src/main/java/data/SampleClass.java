@@ -65,4 +65,25 @@ public class SampleClass {
         this.otherValue = otherValue;
     }
 
+
+
+    public static void display(SampleClass sample) {
+        System.out.println("*************** loaded SampleClass Object ***************");
+        System.out.println("*************** Map : map");
+
+        for(Map.Entry<Point,Date> element: sample.getMap().entrySet()) {
+            System.out.println("point = "+element.getKey()+ " de type "+element.getKey().getClass());
+            System.out.println("date = "+element.getValue()+ " de type "+element.getValue().getClass());
+        }
+        System.out.println("*************** Map : anotherMap");
+
+        for(Map.Entry<Object,Date> element: sample.getAnotherMap().entrySet()) {
+            System.out.println("object = "+element.getKey()+ " de type "+element.getKey().getClass());
+            System.out.println("date = "+element.getValue()+ " de type "+element.getValue().getClass());
+        }
+
+        System.out.println("*************** String : otherValue");
+        System.out.println("otherValue = "+sample.getOtherValue());
+    }
+
 }
