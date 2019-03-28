@@ -12,4 +12,4 @@ pour cloner cette branche seule :
 git clone --single-branch --branch inspring https://github.com/PhilippeRenevierGonin/MapToJSONwithJackson.git
 
 
-Exécution : d'abord le serveur, puis le client (qui recoit, envoie et s'arrête).
+Exécution : d'abord le serveur, puis le client (qui recoit, envoie et s'arrête). Utilise le port 8080 (celui par défaut. écrit en dur dans le client).
